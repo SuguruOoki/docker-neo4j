@@ -1,0 +1,12 @@
+version: '3.3'
+
+services:
+  neo4j:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - 7474:7474
+      - 7687:7687
+    volumes:
+      - ./neo4j_data:/data
